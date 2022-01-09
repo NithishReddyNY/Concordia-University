@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate QR</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h3>Dynamic Offline QR Generator</h3>
+    <div><input id="qr-text" type="text" onkeyup="generateQRCode()" placeholder="Text to generate QR code" /></div>
+    <canvas id="qr-code"></canvas>
+    <script>
+        /* JS comes here */
+        var qr;
+        (function() {
+            qr = new QRious({
+                element: document.getElementById('qr-code'),
+                size: 400,
+                value: ''
+            });
+        })();
+
+        function generateQRCode() {
+            var qrtext = document.getElementById("qr-text").value;
+            qr.set({
+                foreground: 'black',
+                size: 400,
+                value: qrtext
+            });
+        }
+    </script>
+
+</body>
+</body>
+
+</html>
