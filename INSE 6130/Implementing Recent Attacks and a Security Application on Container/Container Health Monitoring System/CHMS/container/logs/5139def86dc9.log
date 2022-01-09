@@ -1,0 +1,29 @@
+]0;root@5139def86dc9: /root@5139def86dc9:/# [K]0;root@5139def86dc9: /root@5139def86dc9:/# ls -al 
+total 56
+drwxr-xr-x   1 root root 4096 Feb  4 09:17 .
+drwxr-xr-x   1 root root 4096 Feb  4 09:17 ..
+-rwxr-xr-x   1 root root    0 Feb  4 09:17 .dockerenv
+lrwxrwxrwx   1 root root    7 Jan 19 01:01 bin -> usr/bin
+drwxrwxrwx   2 root root 4096 Apr 15  2020 boot
+drwxrwxrwx   5 root root  360 Feb  4 09:17 dev
+drwxrwxrwx   1 root root 4096 Feb  4 09:17 etc
+drwxrwxrwx   2 root root 4096 Apr 15  2020 home
+lrwxrwxrwx   1 root root    7 Jan 19 01:01 lib -> usr/lib
+lrwxrwxrwx   1 root root    9 Jan 19 01:01 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root    9 Jan 19 01:01 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root   10 Jan 19 01:01 libx32 -> usr/libx32
+drwxrwxrwx   2 root root 4096 Jan 19 01:01 media
+drwxrwxrwx   2 root root 4096 Jan 19 01:01 mnt
+drwxrwxrwx   2 root root 4096 Jan 19 01:01 opt
+dr-xr-xr-x 236 root root    0 Feb  4 09:17 proc
+drwxrwxrwx   2 root root 4096 Jan 19 01:04 root
+drwxrwxrwx   1 root root 4096 Jan 21 03:38 run
+lrwxrwxrwx   1 root root    8 Jan 19 01:01 sbin -> usr/sbin
+drwxrwxrwx   2 root root 4096 Jan 19 01:01 srv
+dr-xr-xr-x  13 root root    0 Feb  4 09:17 sys
+drwxrwxrwx   2 root root 4096 Jan 19 01:04 tmp
+drwxrwxrwx   1 root root 4096 Jan 19 01:01 usr
+drwxrwxrwx   1 root root 4096 Jan 19 01:04 var
+]0;root@5139def86dc9: /root@5139def86dc9:/# exit
+]0;root@5139def86dc9: /root@5139def86dc9:/# exit
+]0;root@5139def86dc9: /root@5139def86dc9:/# exit
