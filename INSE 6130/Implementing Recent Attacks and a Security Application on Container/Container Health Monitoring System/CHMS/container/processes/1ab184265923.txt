@@ -1,0 +1,4 @@
+root,1,0.0,0.0,/bin/bash
+root,118,0.0,0.0,bash
+root,125,0.0,0.0,ps
+root,126,0.0,0.0,tr
