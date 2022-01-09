@@ -1,0 +1,2 @@
+C,/root
+A,/root/.bash_history
