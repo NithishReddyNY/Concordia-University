@@ -1,0 +1,141 @@
+{UTF-8}
+details collection point=
+	sanitizing level1-(error rate*sanitizing level1)
+	~	
+	~		|
+
+error rate=
+	0.025
+	~	Day
+	~		|
+
+exit=
+	patients information not matched+vaccination point
+	~	Day
+	~		|
+
+no of people arrived=
+	exit
+	~	Day
+	~		|
+
+patients information not matched=
+	details collection point/39
+	~	
+	~		|
+
+people ariival=
+	2500
+	~	Day
+	~		|
+
+people information matched=
+	details collection point
+	~	
+	~		|
+
+sanitizing level 2=
+	people information matched
+	~	
+	~		|
+
+sanitizing level1=
+	people ariival
+	~	Day
+	~		|
+
+vaccination point=
+	sanitizing level 2
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Day
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Day
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Day [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.5
+	~	Day [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|255-255-255|96,96,61,0
+10,1,sanitizing level1,964,298,46,20,8,3,0,16,0,0,0,0,-1--1--1,0-0-0,|12|BI|0-0-0,0,0,0,0,0,0
+10,2,sanitizing level 2,853,131,66,13,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,3,vaccination point,967,718,48,20,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,4,exit,616,358,19,13,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,5,people information matched,959,342,54,27,8,3,0,16,0,0,0,0,-1--1--1,0-0-0,|12|BI|0-0-0,0,0,0,0,0,0
+10,6,patients information not matched,764,361,63,27,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,7,3,4,1,0,0,0,0,192,0,-1--1--1,,1|(726,664)|
+1,8,2,3,1,0,0,0,0,192,0,-1--1--1,,1|(1269,324)|
+11,9,310,1035,445,6,8,34,3,0,0,4,0,0,0,0,0,0,0,0,0
+10,10,details collection point,1106,445,63,20,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,11,1,10,1,0,0,13,3,192,0,0-0-0,|12||0-0-0,1|(1103,349)|
+1,12,10,5,1,0,0,13,3,192,0,0-0-0,|12||0-0-0,1|(969,454)|
+1,13,10,6,1,0,0,0,0,192,0,-1--1--1,,1|(951,598)|
+1,14,6,4,1,0,0,0,3,192,0,255-0-0,|12||0-0-0,1|(673,415)|
+1,15,5,2,1,0,0,13,3,192,0,0-0-0,|12||0-0-0,1|(825,238)|
+10,16,no of people arrived,965,55,53,20,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,17,4,16,1,0,0,0,0,192,0,-1--1--1,,1|(693,174)|
+10,18,error rate,1133,582,40,13,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,19,18,10,1,0,0,0,0,192,0,-1--1--1,,1|(1132,529)|
+10,20,people ariival,879,156,61,20,8,3,0,16,-1,0,0,0,-1--1--1,0-0-0,|12|VD|0-0-0,0,0,0,0,0,0
+1,21,20,1,1,0,0,0,0,192,0,-1--1--1,,1|(957,205)|
+///---\\\
+:L<%^E!@
+1:waittime.vdfx
+1:current.vdfx
+4:Time
+5:details collection point
+9:waittime
+19:61,0
+24:0
+25:100
+26:100
+23:0
+15:0,0,0,0,0,0
+27:0,
+34:0,
+42:1
+72:0
+73:0
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:4
+41:0
+95:0
+96:0
+97:0
+77:0
+78:0
+93:0
+94:0
+92:0
+91:0
+90:0
+87:0
+75:
+43:

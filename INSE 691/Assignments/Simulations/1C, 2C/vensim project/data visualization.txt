@@ -1,0 +1,57 @@
+(01)    details collection point=
+        sanitizing level1-(error rate*sanitizing level1)
+    Units: **undefined**
+    
+(02)    error rate=
+        0.025
+    Units: Day
+    
+(03)    exit=
+        patients information not matched+vaccination point
+    Units: Day
+    
+(04)    FINAL TIME  = 100
+    Units: Day
+    The final time for the simulation.
+
+(05)    INITIAL TIME  = 0
+    Units: Day
+    The initial time for the simulation.
+
+(06)    no of people arrived=
+        exit
+    Units: Day
+    
+(07)    patients information not matched=
+        details collection point/39
+    Units: **undefined**
+    
+(08)    people ariival=
+        2500
+    Units: Day
+    
+(09)    people information matched=
+        details collection point
+    Units: **undefined**
+    
+(10)    sanitizing level 2=
+        people information matched
+    Units: **undefined**
+    
+(11)    sanitizing level1=
+        people ariival
+    Units: Day
+    
+(12)    SAVEPER  = 
+            TIME STEP
+    Units: Day [0,?]
+    The frequency with which output is stored.
+
+(13)    TIME STEP  = 0.5
+    Units: Day [0,?]
+    The time step for the simulation.
+
+(14)    vaccination point=
+        sanitizing level 2
+    Units: **undefined**
+    
