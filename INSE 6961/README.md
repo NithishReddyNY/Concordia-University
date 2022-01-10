@@ -1,4 +1,4 @@
-<h1> Graduate Seminar in Information and Systems Engineering </h1>
+<h1> INSE 6961 Graduate Seminar in Information and Systems Engineering </h1>
 -- Ayda Basyouni
 <h4> </h4>
 Regarding the INSE 6961 one-credit seminar, you need to submit 3 reports of 3 pages each on any one of Udemy courses as described below. 
