@@ -1,5 +1,7 @@
 <h1>ENCS 6042 – Communication Techniques in the Innovation Process<h1>
 
+  -- Hussam Al Maleh 
+  
   <h3> Course profile: </h3>
   This course introduces the frameworks around which client centered innovations are designed. The intent is to showcase innovative ideas to use for the public rather than purely from the innovator’s perspective. I want you to be able to talk about your ideas as though you are telling a story.
 Topics that will be covered include qualitative analysis, client interview techniques, and of course, presentations of your findings.
